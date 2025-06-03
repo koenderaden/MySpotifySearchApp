@@ -57,5 +57,4 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation("com.spotify.android:auth:1.2.3")
-    implementation("com.spotify.android:spotify-player:1.2.3") // optioneel, voor afspelen
 }
