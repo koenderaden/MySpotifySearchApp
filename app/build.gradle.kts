@@ -40,7 +40,7 @@ android {
 }
 
 dependencies {
-
+    // Jetpack Compose
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -49,12 +49,24 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    // Spotify Auth SDK (v2.1.2 from Maven Central)
+    implementation("com.spotify.android:auth:2.1.2")
+
+    // OkHttp (for API requests to Spotify Web API)
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    // Unit tests
     testImplementation(libs.junit)
+
+    // Instrumentation tests
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+
+    // Debugging UI previews
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation("com.spotify.android:auth:1.2.3")
 }
+
